@@ -1,0 +1,1544 @@
+Component: Arm Compiler for Embedded 6.24 Tool: armlink [5f371500]
+
+==============================================================================
+
+Section Cross References
+
+    divider.o(.text.hw_divider_divmod_s32) refers to divider.o(.text.hw_divider_divmod_return) for hw_divider_divmod_return
+    divider.o(.text.hw_divider_divmod_u32) refers to divider.o(.text.hw_divider_divmod_return) for hw_divider_divmod_return
+    irq_handler_chain.o(.data) refers to lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) for irq_add_tail_to_free_list
+    atan2f.o(i.__softfp_atan2f) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f.o(i.__softfp_atan2f) refers to atan2f.o(i.atan2f) for atan2f
+    atan2f.o(i.atan2f) refers (Special) to iusefp.o(.text) for __I$use$fp
+    atan2f.o(i.atan2f) refers to fdiv.o(.text) for __aeabi_fdiv
+    atan2f.o(i.atan2f) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    atan2f.o(i.atan2f) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    atan2f.o(i.atan2f) refers to errno.o(i.__set_errno) for __set_errno
+    atan2f.o(i.atan2f) refers to fadd.o(.text) for __aeabi_fsub
+    atan2f.o(i.atan2f) refers to fmul.o(.text) for __aeabi_fmul
+    atan2f.o(i.atan2f) refers to funder.o(i.__mathlib_flt_infnan2) for __mathlib_flt_infnan2
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry4.o(.ARM.Collect$$$$00000003) for _main_stk
+    fputs.o(i.fputs) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    puts.o(i.puts) refers to stdout.o(.data) for __stdout
+    fwrite.o(i.fwrite) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    putc.o(i.putc) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    putchar.o(i.putchar) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    putchar.o(i.putchar) refers to stdout.o(.data) for __stdout
+    fputs_e.o(.text) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    puts_e.o(.text) refers to stdout.o(.data) for __stdout
+    fwrite_e.o(.text) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    fwrite_e.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printfb.o(i.__0fprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0fprintf$bare) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0printf$bare) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfb.o(i.__0printf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0snprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0sprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printfb.o(i.__0vfprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vfprintf$bare) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vprintf$bare) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfb.o(i.__0vprintf$bare) refers to stdout.o(.data) for __stdout
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsnprintf$bare) refers to printfb.o(i._snputc) for _snputc
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._printf_core) for _printf_core
+    printfb.o(i.__0vsprintf$bare) refers to printfb.o(i._sputc) for _sputc
+    printf0.o(i.__0fprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0fprintf$0) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0printf$0) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf0.o(i.__0printf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0snprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0sprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf0.o(i.__0vfprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vfprintf$0) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vprintf$0) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf0.o(i.__0vprintf$0) refers to stdout.o(.data) for __stdout
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsnprintf$0) refers to printf0.o(i._snputc) for _snputc
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._printf_core) for _printf_core
+    printf0.o(i.__0vsprintf$0) refers to printf0.o(i._sputc) for _sputc
+    printf1.o(i.__0fprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0fprintf$1) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0printf$1) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf1.o(i.__0printf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0snprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0sprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i.__0vfprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vfprintf$1) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vprintf$1) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf1.o(i.__0vprintf$1) refers to stdout.o(.data) for __stdout
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsnprintf$1) refers to printf1.o(i._snputc) for _snputc
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._printf_core) for _printf_core
+    printf1.o(i.__0vsprintf$1) refers to printf1.o(i._sputc) for _sputc
+    printf1.o(i._printf_core) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printf2.o(i.__0fprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0fprintf$2) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0printf$2) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf2.o(i.__0printf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0snprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0sprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf2.o(i.__0vfprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vfprintf$2) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vprintf$2) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf2.o(i.__0vprintf$2) refers to stdout.o(.data) for __stdout
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsnprintf$2) refers to printf2.o(i._snputc) for _snputc
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._printf_core) for _printf_core
+    printf2.o(i.__0vsprintf$2) refers to printf2.o(i._sputc) for _sputc
+    printf3.o(i.__0fprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0fprintf$3) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0printf$3) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf3.o(i.__0printf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0snprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0sprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i.__0vfprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vfprintf$3) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vprintf$3) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf3.o(i.__0vprintf$3) refers to stdout.o(.data) for __stdout
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsnprintf$3) refers to printf3.o(i._snputc) for _snputc
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._printf_core) for _printf_core
+    printf3.o(i.__0vsprintf$3) refers to printf3.o(i._sputc) for _sputc
+    printf3.o(i._printf_core) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printf4.o(i.__0fprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0fprintf$4) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0printf$4) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf4.o(i.__0printf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0snprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0sprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i.__0vfprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vfprintf$4) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vprintf$4) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf4.o(i.__0vprintf$4) refers to stdout.o(.data) for __stdout
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsnprintf$4) refers to printf4.o(i._snputc) for _snputc
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._printf_core) for _printf_core
+    printf4.o(i.__0vsprintf$4) refers to printf4.o(i._sputc) for _sputc
+    printf4.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf5.o(i.__0fprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0fprintf$5) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0printf$5) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf5.o(i.__0printf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0snprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0sprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i.__0vfprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vfprintf$5) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vprintf$5) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf5.o(i.__0vprintf$5) refers to stdout.o(.data) for __stdout
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsnprintf$5) refers to printf5.o(i._snputc) for _snputc
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._printf_core) for _printf_core
+    printf5.o(i.__0vsprintf$5) refers to printf5.o(i._sputc) for _sputc
+    printf5.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf6.o(i.__0fprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0fprintf$6) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0printf$6) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf6.o(i.__0printf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0snprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0sprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i.__0vfprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vfprintf$6) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vprintf$6) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf6.o(i.__0vprintf$6) refers to stdout.o(.data) for __stdout
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsnprintf$6) refers to printf6.o(i._snputc) for _snputc
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._printf_core) for _printf_core
+    printf6.o(i.__0vsprintf$6) refers to printf6.o(i._sputc) for _sputc
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_pre_padding) for _printf_pre_padding
+    printf6.o(i._printf_core) refers to printf6.o(i._printf_post_padding) for _printf_post_padding
+    printf6.o(i._printf_core) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printf7.o(i.__0fprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0fprintf$7) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0printf$7) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf7.o(i.__0printf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0snprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0sprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i.__0vfprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vfprintf$7) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vprintf$7) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf7.o(i.__0vprintf$7) refers to stdout.o(.data) for __stdout
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsnprintf$7) refers to printf7.o(i._snputc) for _snputc
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._printf_core) for _printf_core
+    printf7.o(i.__0vsprintf$7) refers to printf7.o(i._sputc) for _sputc
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_pre_padding) for _printf_pre_padding
+    printf7.o(i._printf_core) refers to printf7.o(i._printf_post_padding) for _printf_post_padding
+    printf7.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printf8.o(i.__0fprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0fprintf$8) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0printf$8) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf8.o(i.__0printf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0snprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0sprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i.__0vfprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vfprintf$8) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vprintf$8) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printf8.o(i.__0vprintf$8) refers to stdout.o(.data) for __stdout
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsnprintf$8) refers to printf8.o(i._snputc) for _snputc
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._printf_core) for _printf_core
+    printf8.o(i.__0vsprintf$8) refers to printf8.o(i._sputc) for _sputc
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_pre_padding) for _printf_pre_padding
+    printf8.o(i._printf_core) refers to printf8.o(i._printf_post_padding) for _printf_post_padding
+    printf8.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i.__0fprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0fprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0fprintf) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0printf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0printf) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfa.o(i.__0printf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0snprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0snprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0snprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0sprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0sprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0sprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i.__0vfprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vfprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vfprintf) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vprintf) refers to lto-llvm-9f913a.o(.text.fputc) for fputc
+    printfa.o(i.__0vprintf) refers to stdout.o(.data) for __stdout
+    printfa.o(i.__0vsnprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsnprintf) refers to printfa.o(i._snputc) for _snputc
+    printfa.o(i.__0vsprintf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._printf_core) for _printf_core
+    printfa.o(i.__0vsprintf) refers to printfa.o(i._sputc) for _sputc
+    printfa.o(i._fp_digits) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._fp_digits) refers to dmul.o(.text) for __aeabi_dmul
+    printfa.o(i._fp_digits) refers to ddiv.o(.text) for __aeabi_ddiv
+    printfa.o(i._fp_digits) refers to cdrcmple.o(.text) for __aeabi_cdrcmple
+    printfa.o(i._fp_digits) refers to dadd.o(.text) for __aeabi_dadd
+    printfa.o(i._fp_digits) refers to dfixul.o(.text) for __aeabi_d2ulz
+    printfa.o(i._fp_digits) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_pre_padding) for _printf_pre_padding
+    printfa.o(i._printf_core) refers to uldiv.o(.text) for __aeabi_uldivmod
+    printfa.o(i._printf_core) refers to printfa.o(i._printf_post_padding) for _printf_post_padding
+    printfa.o(i._printf_core) refers to printfa.o(i._fp_digits) for _fp_digits
+    printfa.o(i._printf_core) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    printfa.o(i._printf_post_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._printf_pre_padding) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._snputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    printfa.o(i._sputc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    malloc2.o(i.__free$2region) refers to mvars.o(.data) for __microlib_freelist
+    malloc2.o(i.__malloc$2region) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc2.o(i.__malloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocr2.o(i.__free$realloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocr2.o(i.__malloc$realloc$2region) refers to mallocr2.o(i.internal_alloc) for internal_alloc
+    mallocr2.o(i.__malloc$realloc$2region) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr2.o(i.__malloc$realloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocr2.o(i.__realloc$2region) refers to mallocr2.o(i.__free$realloc$2region) for __free$realloc$2region
+    mallocr2.o(i.__realloc$2region) refers to mallocr2.o(i.internal_alloc) for internal_alloc
+    mallocr2.o(i.__realloc$2region) refers to mallocr2.o(i.__malloc$realloc$2region) for __malloc$realloc$2region
+    mallocr2.o(i.__realloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocr2.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr2.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca2.o(i.__aligned_malloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    malloca2.o(i.__aligned_malloc$2region) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca2.o(i.__free$memalign$2region) refers to mvars.o(.data) for __microlib_freelist
+    malloca2.o(i.__malloc$memalign$2region) refers to malloca2.o(i.__aligned_malloc$2region) for __aligned_malloc$2region
+    mallocra2.o(i.__aligned_malloc$realloc$2region) refers to mallocra2.o(i.internal_alloc) for internal_alloc
+    mallocra2.o(i.__aligned_malloc$realloc$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocra2.o(i.__aligned_malloc$realloc$2region) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra2.o(i.__free$realloc$memalign$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocra2.o(i.__malloc$realloc$memalign$2region) refers to mallocra2.o(i.__aligned_malloc$realloc$2region) for __aligned_malloc$realloc$2region
+    mallocra2.o(i.__realloc$memalign$2region) refers to mallocra2.o(i.__free$realloc$memalign$2region) for __free$realloc$memalign$2region
+    mallocra2.o(i.__realloc$memalign$2region) refers to mallocra2.o(i.internal_alloc) for internal_alloc
+    mallocra2.o(i.__realloc$memalign$2region) refers to mallocra2.o(i.__malloc$realloc$memalign$2region) for __malloc$realloc$memalign$2region
+    mallocra2.o(i.__realloc$memalign$2region) refers to mvars.o(.data) for __microlib_freelist
+    mallocra2.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra2.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    calloc.o(.text) refers to malloc2.o(i.__malloc$2region) for malloc
+    __0sscanf.o(.text) refers to scanf_char.o(.text) for __vfscanf_char
+    __0sscanf.o(.text) refers to _sgetc.o(.text) for _sgetc
+    scanf_fp.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    scanf_fp.o(.text) refers to llmul.o(.text) for __aeabi_lmul
+    scanf_fp.o(.text) refers to dfltul.o(.text) for __aeabi_ul2d
+    scanf_fp.o(.text) refers to dmul.o(.text) for __aeabi_dmul
+    scanf_fp.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
+    scanf_fp.o(.text) refers to scanf_fp.o(i._is_digit) for _is_digit
+    scanf_fp.o(.text) refers to d2f.o(.text) for __aeabi_d2f
+    fpclassifyf.o(i.__ARM_fpclassifyf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    funder.o(i.__mathlib_flt_divzero) refers to fdiv.o(.text) for __aeabi_fdiv
+    funder.o(i.__mathlib_flt_infnan) refers to fscalb.o(.text) for __ARM_scalbnf
+    funder.o(i.__mathlib_flt_infnan2) refers to fadd.o(.text) for __aeabi_fadd
+    funder.o(i.__mathlib_flt_invalid) refers to fdiv.o(.text) for __aeabi_fdiv
+    funder.o(i.__mathlib_flt_overflow) refers to fscalb.o(.text) for __ARM_scalbnf
+    funder.o(i.__mathlib_flt_posinfnan) refers to fmul.o(.text) for __aeabi_fmul
+    funder.o(i.__mathlib_flt_underflow) refers to fscalb.o(.text) for __ARM_scalbnf
+    entry4.o(.ARM.Collect$$$$00000003) refers to entry4.o(.ARM.Collect$$$$00002714) for __lit__00000000
+    entry4.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry8a.o(.ARM.Collect$$$$00000009) refers (Weak) to cpp_init.o(.text) for __cpp_initialize__aeabi_
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to lto-llvm-9f913a.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to lto-llvm-9f913a.o(.text.main) for main
+    uldiv.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    uldiv.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    scanf_char.o(.text) refers to _scanf.o(.text) for __vfscanf
+    scanf_char.o(.text) refers to isspace_c.o(.text) for isspace
+    fadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fadd.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    fmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fdiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fdiv.o(.text) refers to fepilogue.o(.text) for _float_round
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dfltul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfltul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixul.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    dfixul.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    cdrcmple.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    d2f.o(.text) refers to fepilogue.o(.text) for _float_round
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    idiv_div0.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    isspace_c.o(.text) refers to ctype_c.o(.text) for __ctype_lookup
+    _scanf.o(.text) refers (Weak) to scanf_fp.o(.text) for _scanf_real
+    _scanf.o(.text) refers (Weak) to _scanf_str.o(.text) for _scanf_string
+    fepilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fscalb.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(.text) refers to depilogue.o(i.__ARM_clz) for __ARM_clz
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    ctype_c.o(.text) refers to ctype_c.o(.constdata) for .constdata
+    lto-llvm-9f913a.o(.text) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.main) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.main) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.callbacks) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.on_gpio_irq) for on_gpio_irq
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.irq_hander_chain_free_slot_head) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to irq_handler_chain.o(.data) for irq_handler_chain_slots
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.Default_Handler) for Default_Handler
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.gpio_default_irq_handler) for gpio_default_irq_handler
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.uart_init) for uart_init
+    lto-llvm-9f913a.o(.text.main) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.busy_wait_us) for busy_wait_us
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.configured_freq.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) for alarm_pool_add_repeating_timer_us
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.sleep_ms) for sleep_ms
+    lto-llvm-9f913a.o(.text.main) refers to memseta.o(.text) for __aeabi_memclr4
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_Init) for BSP_I2C1_Init
+    lto-llvm-9f913a.o(.text.main) refers to puts.o(i.puts) for puts
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_GYRO_Set_BDR) for LSM6DSO_FIFO_GYRO_Set_BDR
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) for LSM6DSO_ACC_SetOutputDataRate
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) for LSM6DSO_GYRO_SetOutputDataRate
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_Set_Mode) for LSM6DSO_FIFO_Set_Mode
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_DRDY_Set_Mode) for LSM6DSO_DRDY_Set_Mode
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_get) for lsm6dso_pin_int1_route_get
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) for lsm6dso_pin_int1_route_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_fifo_timestamp_decimation_set) for lsm6dso_fifo_timestamp_decimation_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_timestamp_set) for lsm6dso_timestamp_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_ACC_Set_Power_Mode) for LSM6DSO_ACC_Set_Power_Mode
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_Set_Power_Mode) for LSM6DSO_GYRO_Set_Power_Mode
+    lto-llvm-9f913a.o(.text.main) refers to ffltui.o(.text) for __aeabi_ui2f
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.update_leg_origins) for update_leg_origins
+    lto-llvm-9f913a.o(.text.main) refers to fadd.o(.text) for __aeabi_fadd
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.Send_BLE) for Send_BLE
+    lto-llvm-9f913a.o(.text.main) refers to fmul.o(.text) for __aeabi_fmul
+    lto-llvm-9f913a.o(.text.main) refers to f2d.o(.text) for __aeabi_f2d
+    lto-llvm-9f913a.o(.text.main) refers to dadd.o(.text) for __aeabi_dadd
+    lto-llvm-9f913a.o(.text.main) refers to d2f.o(.text) for __aeabi_d2f
+    lto-llvm-9f913a.o(.text.main) refers to printfa.o(i.__0sprintf) for __2sprintf
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.on_uart_rx_irq) for on_uart_rx_irq
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.data.default_alarm_pool) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) for repeating_timer_20ms_callback
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.timer_20ms) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) for repeating_timer_1ms_callback
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.timer_1ms) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.ReadRegWrap) for ReadRegWrap
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.BSP_GetTick) for BSP_GetTick
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) for BSP_I2C1_ReadReg
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) for BSP_I2C1_WriteReg
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_DeInit) for BSP_I2C1_DeInit
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.Delay_MS) for Delay_MS
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.WriteRegWrap) for WriteRegWrap
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.mfxstate_6x) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.Start_Flag) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.DogCtrl.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.data.DogCtrl.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.TIMER_20MS_FLAG) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.ADDR) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.ESP_RX_Result) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.REG_RX_Result) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.REG_ADDR) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.CDC_TX_BUF) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.main) refers to fdiv.o(.text) for __aeabi_fdiv
+    lto-llvm-9f913a.o(.text.main) refers to fcmpgt.o(.text) for __aeabi_fcmpgt
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) for lsm6dso_xl_data_rate_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_xl_full_scale_set) for lsm6dso_xl_full_scale_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) for lsm6dso_gy_data_rate_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.lsm6dso_gy_full_scale_set) for lsm6dso_gy_full_scale_set
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.main) refers to lto-llvm-9f913a.o(.bss.UART_REG_TX_State) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.main) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.main) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.main) refers to lto-llvm-9f913a.o(.text.main) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.text.single_ik) for single_ik
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fflti.o(.text) for __aeabi_i2f
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fmul.o(.text) for __aeabi_fmul
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fadd.o(.text) for __aeabi_fsub
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to ffixi.o(.text) for __aeabi_f2iz
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to ffltui.o(.text) for __aeabi_ui2f
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to cosf.o(i.cosf) for cosf
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fcmplt.o(.text) for __aeabi_fcmplt
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fdiv.o(.text) for __aeabi_fdiv
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to fcmpgt.o(.text) for __aeabi_fcmpgt
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to acosf.o(i.acosf) for acosf
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to sqrtf.o(i.sqrtf) for sqrtf
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to roundf.o(i.roundf) for roundf
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.knee) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.thigh) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.hip) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to memseta.o(.text) for __aeabi_memclr
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.Servo_Pwm.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.UART_REG_TX_State) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.bss.TIMER_20MS_FLAG) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_20ms_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_20ms_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_20ms_callback) refers to lto-llvm-9f913a.o(.text.repeating_timer_20ms_callback) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.text.update_leg_origins) for update_leg_origins
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fcmpeq.o(.text) for __aeabi_fcmpeq
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fcmpgt.o(.text) for __aeabi_fcmpgt
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fcmplt.o(.text) for __aeabi_fcmplt
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fadd.o(.text) for __aeabi_fadd
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fcmpge.o(.text) for __aeabi_fcmpge
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to fmul.o(.text) for __aeabi_fmul
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.text.calc_leg_pose) for calc_leg_pose
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to ffixi.o(.text) for __aeabi_f2iz
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Pos_Stand_Time) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.sysTickMs) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.repeating_timer_1ms_callback.mode_control_counter) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Start_Flag) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Offset_Trun) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.roll_pid.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.roll_pid.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.pitch_pid.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.pitch_pid.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.interp_roll_pid.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.interp_pitch_pid.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.interp_x.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.interp_y.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.interp_z.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Yaw_Correct.moving_last) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Yaw_Correct.yaw_ref) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to f2d.o(.text) for __aeabi_f2d
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to printfa.o(i.__0sprintf) for __2sprintf
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.text.Send_BLE) for Send_BLE
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to sinf.o(i.sinf) for sinf
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to cosf.o(i.cosf) for cosf
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.CDC_TX_BUF) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Cal_trot.t) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.data.DogCtrl.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.DogCtrl.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.data.DogCtrl.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rf0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rf0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rf0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lb0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lb0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lb0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lf0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lf0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rb0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rb0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.rb0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.lf0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.bss.Dog.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_1ms_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_1ms_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_1ms_callback) refers to lto-llvm-9f913a.o(.text.repeating_timer_1ms_callback) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_gpio_irq) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.on_gpio_irq) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_gpio_irq) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_gpio_irq) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_gpio_irq) refers to lto-llvm-9f913a.o(.text.on_gpio_irq) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to memcpya.o(.text) for __aeabi_memcpy
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to __0sscanf.o(.text) for __0sscanf
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to ffixi.o(.text) for __aeabi_f2iz
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.pos) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.rx6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.REG_ADDR) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.REG_RX_Result) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.esp_rx_pos) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.esp_rx_buffer) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.ADDR) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.data.DogCtrl.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.data.DogCtrl.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.data.DogCtrl.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.DogCtrl.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.bss.ESP_RX_Result) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_uart_rx_irq) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_uart_rx_irq) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.on_uart_rx_irq) refers to lto-llvm-9f913a.o(.text.on_uart_rx_irq) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.Delay_MS) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.Delay_MS) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.Delay_MS) refers to lto-llvm-9f913a.o(.text.sleep_ms) for sleep_ms
+    lto-llvm-9f913a.o(.ARM.exidx.text.Delay_MS) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.Delay_MS) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.Delay_MS) refers to lto-llvm-9f913a.o(.text.Delay_MS) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.Send_BLE) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.Send_BLE) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.Send_BLE) refers to lto-llvm-9f913a.o(.bss.uart_char_to_line_feed) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.Send_BLE) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.Send_BLE) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.Send_BLE) refers to lto-llvm-9f913a.o(.text.Send_BLE) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.single_ik) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.single_ik) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.single_ik) refers to fmul.o(.text) for __aeabi_fmul
+    lto-llvm-9f913a.o(.text.single_ik) refers to fadd.o(.text) for __aeabi_fadd
+    lto-llvm-9f913a.o(.text.single_ik) refers to sqrtf.o(i.sqrtf) for sqrtf
+    lto-llvm-9f913a.o(.text.single_ik) refers to atan2f.o(i.atan2f) for atan2f
+    lto-llvm-9f913a.o(.text.single_ik) refers to ffixi.o(.text) for __aeabi_f2iz
+    lto-llvm-9f913a.o(.text.single_ik) refers to fdiv.o(.text) for __aeabi_fdiv
+    lto-llvm-9f913a.o(.text.single_ik) refers to acosf.o(i.acosf) for acosf
+    lto-llvm-9f913a.o(.ARM.exidx.text.single_ik) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.single_ik) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.single_ik) refers to lto-llvm-9f913a.o(.text.single_ik) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to fmul.o(.text) for __aeabi_fmul
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to cosf.o(i.cosf) for cosf
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to sinf.o(i.sinf) for sinf
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to fadd.o(.text) for __aeabi_fadd
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.bss.Dog.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.calc_leg_pose) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.calc_leg_pose) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.calc_leg_pose) refers to lto-llvm-9f913a.o(.text.calc_leg_pose) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to ffltui.o(.text) for __aeabi_ui2f
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to fcmpgt.o(.text) for __aeabi_fcmpgt
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to ffixi.o(.text) for __aeabi_f2iz
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to fadd.o(.text) for __aeabi_fsub
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to fcmplt.o(.text) for __aeabi_fcmplt
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.text.calc_leg_pose) for calc_leg_pose
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.data.DogCtrl.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.data.DogCtrl.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.DogCtrl.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.data.DogCtrl.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_roll.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_pitch.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_yaw.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_x.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_y.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.interp_z.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rf0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rf0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rf0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.3) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lf0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lf0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lf0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rb0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rb0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.rb0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lb0.0) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.10) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lb0.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.Dog.11) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.update_leg_origins) refers to lto-llvm-9f913a.o(.bss.lb0.2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.update_leg_origins) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.update_leg_origins) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.update_leg_origins) refers to lto-llvm-9f913a.o(.text.update_leg_origins) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) refers to lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) for lsm6dso_xl_data_rate_set
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_SetOutputDataRate) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_SetOutputDataRate) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_SetOutputDataRate) refers to lto-llvm-9f913a.o(.text.LSM6DSO_ACC_SetOutputDataRate) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) refers to lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) for lsm6dso_gy_data_rate_set
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_SetOutputDataRate) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_SetOutputDataRate) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_SetOutputDataRate) refers to lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_SetOutputDataRate) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.ReadRegWrap) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.ReadRegWrap) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.ReadRegWrap) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.ReadRegWrap) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.ReadRegWrap) refers to lto-llvm-9f913a.o(.text.ReadRegWrap) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.WriteRegWrap) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.WriteRegWrap) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.WriteRegWrap) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.WriteRegWrap) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.WriteRegWrap) refers to lto-llvm-9f913a.o(.text.WriteRegWrap) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_Set_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_Set_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_Set_Mode) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_Set_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_Set_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_Set_Mode) refers to lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_Set_Mode) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_GYRO_Set_BDR) refers to lto-llvm-9f913a.o(.text.LSM6DSO_FIFO_GYRO_Set_BDR) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_Set_Power_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_Set_Power_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_ACC_Set_Power_Mode) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_Set_Power_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_Set_Power_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_Set_Power_Mode) refers to lto-llvm-9f913a.o(.text.LSM6DSO_ACC_Set_Power_Mode) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_Set_Power_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_Set_Power_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_Set_Power_Mode) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_Set_Power_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_Set_Power_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_Set_Power_Mode) refers to lto-llvm-9f913a.o(.text.LSM6DSO_GYRO_Set_Power_Mode) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.LSM6DSO_DRDY_Set_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.LSM6DSO_DRDY_Set_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.LSM6DSO_DRDY_Set_Mode) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_DRDY_Set_Mode) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_DRDY_Set_Mode) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_DRDY_Set_Mode) refers to lto-llvm-9f913a.o(.text.LSM6DSO_DRDY_Set_Mode) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_full_scale_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_full_scale_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_full_scale_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_full_scale_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_full_scale_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_full_scale_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_xl_full_scale_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_data_rate_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_data_rate_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_data_rate_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_xl_data_rate_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_full_scale_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_full_scale_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_full_scale_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_full_scale_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_full_scale_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_full_scale_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_gy_full_scale_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_data_rate_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_data_rate_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_data_rate_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_gy_data_rate_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_timestamp_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_timestamp_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_timestamp_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_timestamp_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_timestamp_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_timestamp_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_timestamp_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_fifo_timestamp_decimation_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_fifo_timestamp_decimation_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_fifo_timestamp_decimation_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_fifo_timestamp_decimation_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_fifo_timestamp_decimation_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_fifo_timestamp_decimation_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_fifo_timestamp_decimation_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int2_route_get) for lsm6dso_pin_int2_route_get
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_set) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_set) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_set) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_set) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int2_route_get) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int2_route_get) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int2_route_get) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int2_route_get) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int2_route_get) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int2_route_get) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int2_route_get) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_get) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_get) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_get) refers to lto-llvm-9f913a.o(.bss.lsm6dso_obj) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_get) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_get) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_get) refers to lto-llvm-9f913a.o(.text.lsm6dso_pin_int1_route_get) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers to lto-llvm-9f913a.o(.bss.i2c1_inst.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers to lto-llvm-9f913a.o(.bss.configured_freq.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_Init) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_Init) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_Init) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_Init) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_Init) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_DeInit) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.BSP_I2C1_DeInit) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_DeInit) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_DeInit) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_DeInit) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_DeInit) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) refers to memcpya.o(.text) for __aeabi_memcpy
+    lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) refers to lto-llvm-9f913a.o(.text.i2c_write_blocking) for i2c_write_blocking
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_WriteReg) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_WriteReg) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_WriteReg) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_WriteReg) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) refers to lto-llvm-9f913a.o(.text.i2c_write_blocking) for i2c_write_blocking
+    lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) refers to lto-llvm-9f913a.o(.bss.i2c1_inst.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_ReadReg) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_ReadReg) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_ReadReg) refers to lto-llvm-9f913a.o(.text.BSP_I2C1_ReadReg) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.BSP_GetTick) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.BSP_GetTick) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.BSP_GetTick) refers to lto-llvm-9f913a.o(.bss.sysTickMs) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_GetTick) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_GetTick) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.BSP_GetTick) refers to lto-llvm-9f913a.o(.text.BSP_GetTick) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.SysTick_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.SysTick_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.SysTick_Handler) refers to lto-llvm-9f913a.o(.bss.SysTickCount) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.SysTick_Handler) refers to lto-llvm-9f913a.o(.bss.SysTickUpdated) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.SysTick_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.SysTick_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.SysTick_Handler) refers to lto-llvm-9f913a.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fgetc) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.fgetc) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.fgetc) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.fgetc) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.fgetc) refers to lto-llvm-9f913a.o(.text.fgetc) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers to fwrite.o(i.fwrite) for fwrite
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers to fputs.o(i.fputs) for fputs
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    lto-llvm-9f913a.o(.text.__aeabi_assert) refers to stderr.o(.data) for __stderr
+    lto-llvm-9f913a.o(.ARM.exidx.text.__aeabi_assert) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.__aeabi_assert) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.__aeabi_assert) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.abort) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.abort) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.abort) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.abort) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.abort) refers to lto-llvm-9f913a.o(.text.abort) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.__pico_entry) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.4) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.5) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.7) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.8) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.9) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.configured_freq.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to memcpya.o(.text) for __aeabi_memcpy4
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.panic) for panic
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.data.striped_spin_lock_num) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.ram_vector_table) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.data.default_alarm_pool) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) for timer_pool_entry_comparator
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.claimed.429) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.timer_callbacks_pending) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) for hardware_alarm_irq_handler
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.Default_Handler) for Default_Handler
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.alarm_callbacks) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) for alarm_pool_alarm_callback
+    lto-llvm-9f913a.o(.text.__pico_entry) refers to lto-llvm-9f913a.o(.bss.pools) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.__pico_entry) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.__pico_entry) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.__pico_entry) refers to lto-llvm-9f913a.o(.text.__pico_entry) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.fputc) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.fputc) refers to memcpya.o(.text) for __aeabi_memcpy4
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.stdout_putchar.index.245) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.stdout_putchar.buffer.248) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.noinit) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.SysTickUpdated) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.SysTickCount) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.bss.TS_OverflowLock) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.fputc) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.fputc) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.fputc) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.fputc) refers to lto-llvm-9f913a.o(.text.fputc) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.$Sub$$_sys_open) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.$Sub$$_sys_open) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$_sys_open) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$_sys_open) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$_sys_open) refers to lto-llvm-9f913a.o(.text.$Sub$$_sys_open) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers to printfa.o(i.__0vprintf) for $Super$$vprintf
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.$Sub$$vprintf) refers to lto-llvm-9f913a.o(.mutex_array) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$vprintf) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$vprintf) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$vprintf) refers to lto-llvm-9f913a.o(.text.$Sub$$vprintf) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.$Sub$$printf) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.$Sub$$printf) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.$Sub$$printf) refers to lto-llvm-9f913a.o(.text.$Sub$$vprintf) for vprintf
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$printf) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$printf) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$printf) refers to lto-llvm-9f913a.o(.text.$Sub$$printf) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.timer_pool_entry_comparator) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.timer_pool_entry_comparator) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.timer_pool_entry_comparator) refers to lto-llvm-9f913a.o(.text.timer_pool_entry_comparator) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.text.hardware_alarm_set_target) for hardware_alarm_set_target
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.text.ph_remove_any_head) for ph_remove_any_head
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.text.add_alarm_under_lock) for add_alarm_under_lock
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.bss.pools) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_alarm_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_alarm_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_alarm_callback) refers to lto-llvm-9f913a.o(.text.alarm_pool_alarm_callback) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers to lto-llvm-9f913a.o(.text.hardware_alarm_set_target) for hardware_alarm_set_target
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers to lto-llvm-9f913a.o(.text.ph_remove_and_free_node) for ph_remove_and_free_node
+    lto-llvm-9f913a.o(.text.add_alarm_under_lock) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.add_alarm_under_lock) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.add_alarm_under_lock) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.add_alarm_under_lock) refers to lto-llvm-9f913a.o(.text.add_alarm_under_lock) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.text.add_alarm_under_lock) for add_alarm_under_lock
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.data.default_alarm_pool) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.text.repeating_timer_callback) for repeating_timer_callback
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_add_repeating_timer_us) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_add_repeating_timer_us) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_add_repeating_timer_us) refers to lto-llvm-9f913a.o(.text.alarm_pool_add_repeating_timer_us) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.repeating_timer_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.repeating_timer_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.repeating_timer_callback) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.repeating_timer_callback) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_callback) refers to lto-llvm-9f913a.o(.text.repeating_timer_callback) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.sleep_until_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.sleep_until_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_until_callback) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_until_callback) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_until_callback) refers to lto-llvm-9f913a.o(.text.sleep_until_callback) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.sleep_ms) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.sleep_ms) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to llmul.o(.text) for __aeabi_lmul
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.text.add_alarm_under_lock) for add_alarm_under_lock
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.text.panic) for panic
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.data.default_alarm_pool) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.sleep_ms) refers to lto-llvm-9f913a.o(.text.sleep_until_callback) for sleep_until_callback
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_ms) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_ms) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.sleep_ms) refers to lto-llvm-9f913a.o(.text.sleep_ms) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.ph_merge_two_pass) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.ph_merge_two_pass) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.ph_merge_two_pass) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.ph_merge_two_pass) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_merge_two_pass) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_merge_two_pass) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_merge_two_pass) refers to lto-llvm-9f913a.o(.text.ph_merge_two_pass) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.ph_remove_any_head) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.ph_remove_any_head) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.ph_remove_any_head) refers to lto-llvm-9f913a.o(.text.ph_merge_two_pass) for ph_merge_two_pass
+    lto-llvm-9f913a.o(.text.ph_remove_any_head) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.ph_remove_any_head) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_any_head) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_any_head) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_any_head) refers to lto-llvm-9f913a.o(.text.ph_remove_any_head) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.ph_remove_and_free_node) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.ph_remove_and_free_node) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.ph_remove_and_free_node) refers to lto-llvm-9f913a.o(.text.ph_remove_any_head) for ph_remove_any_head
+    lto-llvm-9f913a.o(.text.ph_remove_and_free_node) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.ph_remove_and_free_node) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_and_free_node) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_and_free_node) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_and_free_node) refers to lto-llvm-9f913a.o(.text.ph_remove_and_free_node) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) refers to lto-llvm-9f913a.o(.bss.boot2_copyout_valid) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) refers to lto-llvm-9f913a.o(.bss.boot2_copyout) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_init_boot2_copyout) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_init_boot2_copyout) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_init_boot2_copyout) refers to lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.time_critical.flash_enable_xip_via_boot2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.time_critical.flash_enable_xip_via_boot2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.time_critical.flash_enable_xip_via_boot2) refers to lto-llvm-9f913a.o(.bss.boot2_copyout) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_enable_xip_via_boot2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_enable_xip_via_boot2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_enable_xip_via_boot2) refers to lto-llvm-9f913a.o(.time_critical.flash_enable_xip_via_boot2) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.time_critical.flash_init_boot2_copyout) for flash_init_boot2_copyout
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.time_critical.flash_cs_force) for flash_cs_force
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.time_critical.flash_enable_xip_via_boot2) for flash_enable_xip_via_boot2
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_do_cmd) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_do_cmd) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_do_cmd) refers to lto-llvm-9f913a.o(.time_critical.flash_do_cmd) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.time_critical.flash_cs_force) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.time_critical.flash_cs_force) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_cs_force) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_cs_force) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_cs_force) refers to lto-llvm-9f913a.o(.time_critical.flash_cs_force) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.gpio_default_irq_handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.gpio_default_irq_handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.gpio_default_irq_handler) refers to lto-llvm-9f913a.o(.bss.callbacks) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.gpio_default_irq_handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.gpio_default_irq_handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.gpio_default_irq_handler) refers to lto-llvm-9f913a.o(.text.gpio_default_irq_handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.i2c_write_blocking) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.i2c_write_blocking) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.i2c_write_blocking) refers to lto-llvm-9f913a.o(.bss.i2c1_inst.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.i2c_write_blocking) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.i2c_write_blocking) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.i2c_write_blocking) refers to lto-llvm-9f913a.o(.text.i2c_write_blocking) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers to irq_handler_chain.o(.data) for irq_handler_chain_slots
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers to lto-llvm-9f913a.o(.text.Default_Handler) for Default_Handler
+    lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) refers to lto-llvm-9f913a.o(.bss.irq_hander_chain_free_slot_head) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.irq_add_tail_to_free_list) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.irq_add_tail_to_free_list) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.irq_add_tail_to_free_list) refers to lto-llvm-9f913a.o(.text.irq_add_tail_to_free_list) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.busy_wait_us) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.busy_wait_us) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.busy_wait_us) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.busy_wait_us) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.busy_wait_us) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.busy_wait_us) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.busy_wait_us) refers to lto-llvm-9f913a.o(.text.busy_wait_us) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) refers to lto-llvm-9f913a.o(.bss.timer_callbacks_pending) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) refers to lto-llvm-9f913a.o(.bss.target_hi) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) refers to lto-llvm-9f913a.o(.bss.alarm_callbacks) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_irq_handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_irq_handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_irq_handler) refers to lto-llvm-9f913a.o(.text.hardware_alarm_irq_handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers to lto-llvm-9f913a.o(.text.__aeabi_assert) for __aeabi_assert
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers to lto-llvm-9f913a.o(.bss.target_hi) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers to lto-llvm-9f913a.o(.bss.timer_callbacks_pending) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.hardware_alarm_set_target) refers to lto-llvm-9f913a.o(.rodata.str1.1) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_set_target) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_set_target) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_set_target) refers to lto-llvm-9f913a.o(.text.hardware_alarm_set_target) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.uart_init) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.uart_init) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.uart_init) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    lto-llvm-9f913a.o(.text.uart_init) refers to lto-llvm-9f913a.o(.text.busy_wait_us) for busy_wait_us
+    lto-llvm-9f913a.o(.text.uart_init) refers to lto-llvm-9f913a.o(.bss.configured_freq.6) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.uart_init) refers to lto-llvm-9f913a.o(.bss.uart_char_to_line_feed) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.ARM.exidx.text.uart_init) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.uart_init) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.uart_init) refers to lto-llvm-9f913a.o(.text.uart_init) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.panic) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.panic) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.panic) refers to puts.o(i.puts) for puts
+    lto-llvm-9f913a.o(.text.panic) refers to lto-llvm-9f913a.o(.text.$Sub$$vprintf) for vprintf
+    lto-llvm-9f913a.o(.ARM.exidx.text.panic) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.panic) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.panic) refers to lto-llvm-9f913a.o(.text.panic) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) refers to memseta.o(.text) for __aeabi_memclr
+    lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) refers to lto-llvm-9f913a.o(.time_critical.flash_do_cmd) for flash_do_cmd
+    lto-llvm-9f913a.o(.ARM.exidx.text._retrieve_unique_id_on_boot) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text._retrieve_unique_id_on_boot) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text._retrieve_unique_id_on_boot) refers to lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.Reset_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.Reset_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.Reset_Handler) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    lto-llvm-9f913a.o(.text.Reset_Handler) refers to lto-llvm-9f913a.o(RESET) for __Vectors
+    lto-llvm-9f913a.o(.ARM.exidx.text.Reset_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.Reset_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.Reset_Handler) refers to lto-llvm-9f913a.o(.text.Reset_Handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.HardFault_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.HardFault_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.HardFault_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.HardFault_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.HardFault_Handler) refers to lto-llvm-9f913a.o(.text.HardFault_Handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.Default_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.Default_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.Default_Handler) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.Default_Handler) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.Default_Handler) refers to lto-llvm-9f913a.o(.text.Default_Handler) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.text.__keep_stage2_boot) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.text.__keep_stage2_boot) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.text.__keep_stage2_boot) refers to compile_time_choice.o(.text) for _stage2_boot
+    lto-llvm-9f913a.o(.ARM.exidx.text.__keep_stage2_boot) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.exidx.text.__keep_stage2_boot) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.exidx.text.__keep_stage2_boot) refers to lto-llvm-9f913a.o(.text.__keep_stage2_boot) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.bss.Pos_Stand_Time) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Pos_Stand_Time) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.TIMER_20MS_FLAG) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.TIMER_20MS_FLAG) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.repeating_timer_1ms_callback.mode_control_counter) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.repeating_timer_1ms_callback.mode_control_counter) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.rodata.str1.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.rodata.str1.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ARM.use_no_argv) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ARM.use_no_argv) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.REG_RX_Result) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.REG_RX_Result) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.esp_rx_pos) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.esp_rx_pos) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.esp_rx_buffer) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.esp_rx_buffer) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.ESP_RX_Result) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.ESP_RX_Result) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.timer_20ms) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.timer_20ms) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.timer_1ms) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.timer_1ms) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.UART_REG_TX_State) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.UART_REG_TX_State) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.ADDR) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.ADDR) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rx6) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rx6) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.pos) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.pos) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.hip) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.hip) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.thigh) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.thigh) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.knee) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.knee) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.3) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.3) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.5) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.5) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.6) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.6) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.7) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.7) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.8) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.8) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.9) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.9) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.10) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.10) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.11) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Servo_Pwm.11) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Start_Flag) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Start_Flag) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.DogCtrl.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.DogCtrl.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.3) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.3) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.DogCtrl.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.DogCtrl.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.5) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.5) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.6) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.6) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.7) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.7) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.8) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.8) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.9) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.9) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.DogCtrl.10) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.DogCtrl.10) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.DogCtrl.11) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.DogCtrl.11) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Offset_Trun) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Offset_Trun) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Yaw_Correct.yaw_ref) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Yaw_Correct.yaw_ref) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Yaw_Correct.moving_last) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Yaw_Correct.moving_last) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.CDC_TX_BUF) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.CDC_TX_BUF) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Cal_trot.t) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Cal_trot.t) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rf0.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rf0.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rf0.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rf0.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rf0.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rf0.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.3) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.3) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.5) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.5) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.6) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.6) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.7) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.7) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.8) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.8) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.9) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.9) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.10) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.10) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.Dog.11) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.Dog.11) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lb0.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lb0.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lb0.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lb0.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lb0.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lb0.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lf0.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lf0.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lf0.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lf0.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lf0.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lf0.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rb0.0) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rb0.0) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rb0.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rb0.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.rb0.2) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.rb0.2) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.roll_pid.3) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.roll_pid.3) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.roll_pid.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.roll_pid.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.pitch_pid.3) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.pitch_pid.3) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.pitch_pid.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.pitch_pid.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_roll_pid.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_roll_pid.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_pitch_pid.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_pitch_pid.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_x.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_x.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_y.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_y.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_z.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_z.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.REG_ADDR) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.REG_ADDR) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_roll.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_roll.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_pitch.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_pitch.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.interp_yaw.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.interp_yaw.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.mfxstate_6x) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.mfxstate_6x) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.lsm6dso_obj) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.lsm6dso_obj) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.sysTickMs) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.sysTickMs) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.noinit) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.noinit) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.rodata.EventRecorderInfo) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.rodata.EventRecorderInfo) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.rodata.EventRecorderInfo) refers to lto-llvm-9f913a.o(.bss.noinit) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.bss.SysTickCount) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.SysTickCount) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.SysTickUpdated) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.SysTickUpdated) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.TS_OverflowLock) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.TS_OverflowLock) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.init_array.101) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.init_array.101) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.init_array.101) refers to lto-llvm-9f913a.o(.text.__pico_entry) for __pico_entry
+    lto-llvm-9f913a.o(.init_array) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.init_array) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.init_array) refers to lto-llvm-9f913a.o(.text._retrieve_unique_id_on_boot) for _retrieve_unique_id_on_boot
+    lto-llvm-9f913a.o(.bss.stdout_putchar.index.245) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.stdout_putchar.index.245) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.stdout_putchar.buffer.248) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.stdout_putchar.buffer.248) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.mutex_array) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.mutex_array) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.default_alarm_pool) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.default_alarm_pool) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.default_alarm_pool) refers to lto-llvm-9f913a.o(.data.default_alarm_pool_heap) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.data.default_alarm_pool) refers to lto-llvm-9f913a.o(.bss.default_alarm_pool_entries) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.data.default_alarm_pool) refers to lto-llvm-9f913a.o(.bss.default_alarm_pool_entry_ids_high) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.bss.pools) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.pools) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.default_alarm_pool_heap) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.default_alarm_pool_heap) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.default_alarm_pool_heap) refers to lto-llvm-9f913a.o(.bss.default_alarm_pool_heap_nodes) for [Anonymous Symbol]
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_entries) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_entries) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_entry_ids_high) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_entry_ids_high) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_heap_nodes) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.default_alarm_pool_heap_nodes) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.4) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.4) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.5) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.5) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.6) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.6) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.7) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.7) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.8) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.8) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.configured_freq.9) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.configured_freq.9) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.boot2_copyout_valid) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.boot2_copyout_valid) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.boot2_copyout) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.boot2_copyout) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.callbacks) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.callbacks) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.irq_hander_chain_free_slot_head) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.irq_hander_chain_free_slot_head) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.data.striped_spin_lock_num) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.data.striped_spin_lock_num) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.claimed.429) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.claimed.429) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.alarm_callbacks) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.alarm_callbacks) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.timer_callbacks_pending) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.timer_callbacks_pending) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.target_hi) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.target_hi) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.uart_char_to_line_feed) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.uart_char_to_line_feed) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.bss.i2c1_inst.1) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.bss.i2c1_inst.1) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(.ram_vector_table) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(.ram_vector_table) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(RESET) refers (Special) to _scanf_str.o(.text) for _scanf_string
+    lto-llvm-9f913a.o(RESET) refers (Special) to scanf_fp.o(.text) for _scanf_real
+    lto-llvm-9f913a.o(RESET) refers to lto-llvm-9f913a.o(.text.Reset_Handler) for Reset_Handler
+    lto-llvm-9f913a.o(RESET) refers to lto-llvm-9f913a.o(.text.Default_Handler) for Default_Handler
+    lto-llvm-9f913a.o(RESET) refers to lto-llvm-9f913a.o(.text.HardFault_Handler) for HardFault_Handler
+    lto-llvm-9f913a.o(RESET) refers to lto-llvm-9f913a.o(.text.SysTick_Handler) for SysTick_Handler
+    acosf.o(i.__softfp_acosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    acosf.o(i.__softfp_acosf) refers to acosf.o(i.acosf) for acosf
+    acosf.o(i.acosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    acosf.o(i.acosf) refers to fadd.o(.text) for __aeabi_frsub
+    acosf.o(i.acosf) refers to fscalb.o(.text) for __ARM_scalbnf
+    acosf.o(i.acosf) refers to sqrtf.o(i.sqrtf) for sqrtf
+    acosf.o(i.acosf) refers to fmul.o(.text) for __aeabi_fmul
+    acosf.o(i.acosf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    acosf.o(i.acosf) refers to errno.o(i.__set_errno) for __set_errno
+    acosf.o(i.acosf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    cosf.o(i.__softfp_cosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf.o(i.__softfp_cosf) refers to cosf.o(i.cosf) for cosf
+    cosf.o(i.cosf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cosf.o(i.cosf) refers to fmul.o(.text) for __aeabi_fmul
+    cosf.o(i.cosf) refers to frnd.o(.text) for _frnd
+    cosf.o(i.cosf) refers to ffixi.o(.text) for __aeabi_f2iz
+    cosf.o(i.cosf) refers to fadd.o(.text) for __aeabi_frsub
+    cosf.o(i.cosf) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    cosf.o(i.cosf) refers to errno.o(i.__set_errno) for __set_errno
+    cosf.o(i.cosf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    cosf.o(i.cosf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sinf.o(i.__softfp_sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.__softfp_sinf) refers to sinf.o(i.sinf) for sinf
+    sinf.o(i.sinf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sinf.o(i.sinf) refers to fmul.o(.text) for __aeabi_fmul
+    sinf.o(i.sinf) refers to frnd.o(.text) for _frnd
+    sinf.o(i.sinf) refers to ffixi.o(.text) for __aeabi_f2iz
+    sinf.o(i.sinf) refers to fadd.o(.text) for __aeabi_frsub
+    sinf.o(i.sinf) refers to rredf.o(i.__mathlib_rredf2) for __mathlib_rredf2
+    sinf.o(i.sinf) refers to fpclassifyf.o(i.__ARM_fpclassifyf) for __ARM_fpclassifyf
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_underflow) for __mathlib_flt_underflow
+    sinf.o(i.sinf) refers to errno.o(i.__set_errno) for __set_errno
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_invalid) for __mathlib_flt_invalid
+    sinf.o(i.sinf) refers to funder.o(i.__mathlib_flt_infnan) for __mathlib_flt_infnan
+    sqrtf.o(i.__softfp_sqrtf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf.o(i.__softfp_sqrtf) refers to fsqrt.o(.text) for _fsqrt
+    sqrtf.o(i.__softfp_sqrtf) refers to errno.o(i.__set_errno) for __set_errno
+    sqrtf.o(i.sqrtf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sqrtf.o(i.sqrtf) refers to fsqrt.o(.text) for _fsqrt
+    sqrtf.o(i.sqrtf) refers to errno.o(i.__set_errno) for __set_errno
+    roundf.o(i.roundf) refers (Special) to iusefp.o(.text) for __I$use$fp
+    roundf.o(i.roundf) refers to frnd.o(.text) for _frnd
+    roundf.o(i.roundf) refers to fadd.o(.text) for __aeabi_fsub
+    cpp_init.o(.emb_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.init_array) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.dummy_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    fcmplt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpge.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpgt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fcmpeq.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fflti.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    ffltui.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ffltui.o(.text) refers to fepilogue.o(.text) for _float_epilogue
+    ffixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    f2d.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__mathlib_rredf2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__mathlib_rredf2) refers to rredf.o(i.__ARM_common_ll_muluu) for __ARM_common_ll_muluu
+    rredf.o(i.__mathlib_rredf2) refers to fflti.o(.text) for __aeabi_i2f
+    rredf.o(i.__mathlib_rredf2) refers to ffltui.o(.text) for __aeabi_ui2f
+    rredf.o(i.__mathlib_rredf2) refers to fscalb.o(.text) for __ARM_scalbnf
+    rredf.o(i.__mathlib_rredf2) refers to fadd.o(.text) for __aeabi_fadd
+    rredf.o(i.__mathlib_rredf2) refers to fmul.o(.text) for __aeabi_fmul
+    rredf.o(i.__mathlib_rredf2) refers to rredf.o(.constdata) for .constdata
+    rredf.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fsqrt.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    fsqrt.o(.text) refers to fepilogue.o(.text) for _float_round
+    frnd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    frnd.o(.text) refers to fepilogue.o(.text) for _float_round
+    scanf_fp.o(i._is_digit) refers (Special) to iusefp.o(.text) for __I$use$fp
+    depilogue.o(i.__ARM_clz) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rredf.o(i.__ARM_common_ll_muluu) refers (Special) to iusefp.o(.text) for __I$use$fp
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing divider.o(.text), (0 bytes).
+    Removing divider.o(.text.hw_divider_divmod_s32), (12 bytes).
+    Removing divider.o(.text.hw_divider_divmod_u32), (12 bytes).
+    Removing divider.o(.text.hw_divider_divmod_return), (12 bytes).
+    Removing divider.o(.text.hw_divider_save_state), (20 bytes).
+    Removing divider.o(.text.hw_divider_restore_state), (20 bytes).
+    Removing irq_handler_chain.o(.text), (0 bytes).
+    Removing lto-llvm-9f913a.o(.text), (0 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.main), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_20ms_callback), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_1ms_callback), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.on_gpio_irq), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.on_uart_rx_irq), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.Delay_MS), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.Send_BLE), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.single_ik), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.calc_leg_pose), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.update_leg_origins), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_SetOutputDataRate), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_SetOutputDataRate), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.ReadRegWrap), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.WriteRegWrap), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_Set_Mode), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_FIFO_GYRO_Set_BDR), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_ACC_Set_Power_Mode), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_GYRO_Set_Power_Mode), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.LSM6DSO_DRDY_Set_Mode), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_full_scale_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_xl_data_rate_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_full_scale_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_gy_data_rate_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_timestamp_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_fifo_timestamp_decimation_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_set), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int2_route_get), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.lsm6dso_pin_int1_route_get), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_Init), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_DeInit), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_WriteReg), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.BSP_I2C1_ReadReg), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.BSP_GetTick), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.text.fgetc), (6 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.fgetc), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.__aeabi_assert), (8 bytes).
+    Removing lto-llvm-9f913a.o(.text.abort), (2 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.abort), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.__pico_entry), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.fputc), (8 bytes).
+    Removing lto-llvm-9f913a.o(.text.$Sub$$_sys_open), (4 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$_sys_open), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$vprintf), (8 bytes).
+    Removing lto-llvm-9f913a.o(.text.$Sub$$printf), (28 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.$Sub$$printf), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.timer_pool_entry_comparator), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_alarm_callback), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.add_alarm_under_lock), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.alarm_pool_add_repeating_timer_us), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.repeating_timer_callback), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.sleep_until_callback), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.sleep_ms), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.ph_merge_two_pass), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_any_head), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.ph_remove_and_free_node), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_init_boot2_copyout), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_enable_xip_via_boot2), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_do_cmd), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.time_critical.flash_cs_force), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.gpio_default_irq_handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.i2c_write_blocking), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.irq_add_tail_to_free_list), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.busy_wait_us), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_irq_handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.hardware_alarm_set_target), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.uart_init), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.panic), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text._retrieve_unique_id_on_boot), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.Reset_Handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.Default_Handler), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.exidx.text.__keep_stage2_boot), (8 bytes).
+    Removing lto-llvm-9f913a.o(.ARM.use_no_argv), (4 bytes).
+
+82 unused section(s) (total 672 bytes) removed from the image.

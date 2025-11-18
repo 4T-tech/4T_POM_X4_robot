@@ -1,0 +1,37 @@
+./objects/adc.o: \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_adc\adc.c \
+  RTE\Device\RP2040_Core0\env_wrapper.h \
+  D:\KEIL_V543\ARM\CMSIS\6.2.0\CMSIS\Core\Include\cmsis_compiler.h \
+  D:\KEIL_V543\ARM\CMSIS\6.2.0\CMSIS\Core\Include\cmsis_armclang.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\__wrapper\sys\cdefs.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\types.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\assert.h \
+  RTE\_Pico\Pre_Include_Device_Pico_SDK.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\__boards_wrapper\pico_base\pico\version.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\config.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\__boards_wrapper\pico_base\pico\config_autogen.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\boards\include\boards\pico.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\error.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_adc\include\hardware\adc.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\adc.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_base\include\hardware\address_mapped.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\adc.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_gpio\include\hardware\gpio.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\sio.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\interp.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\padsbank0.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_bank0.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\iobank0.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\io_bank0.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_irq\include\hardware\irq.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\intctrl.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\hardware_resets\include\hardware\resets.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_structs\include\hardware\structs\resets.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\resets.h

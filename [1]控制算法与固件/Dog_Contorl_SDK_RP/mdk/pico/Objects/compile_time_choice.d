@@ -1,0 +1,23 @@
+./objects/compile_time_choice.o: \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\compile_time_choice.S \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\include\boot_stage2\config.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\types.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\__boards_wrapper\pico_base\pico\version.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\config.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\__boards_wrapper\pico_base\pico\config_autogen.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\boards\include\boards\pico.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\cmsis\include\cmsis\rename_exceptions.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\pico_platform\include\pico\platform.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\platform_defs.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\addressmap.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\sio.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\common\pico_base\include\pico\error.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\boot2_w25q080.S \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\pico_platform\include\pico\asm_helper.S \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\ssi.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\pads_qspi.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\asminclude\boot2_helpers\exit_from_boot2.S \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2040\hardware_regs\include\hardware\regs\m0plus.h \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\asminclude\boot2_helpers\wait_ssi_ready.S \
+  D:\KEIL_V543\RaspberryPi\RP2xxx_DFP\0.9.5\pico-sdk\src\rp2_common\boot_stage2\asminclude\boot2_helpers\read_flash_sreg.S

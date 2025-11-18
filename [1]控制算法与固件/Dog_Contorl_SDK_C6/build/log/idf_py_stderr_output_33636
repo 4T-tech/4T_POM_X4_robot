@@ -1,0 +1,23 @@
+CMake Error:
+  Running
+
+   'D:/Work_4t/ESP_ENV/tools/ninja/1.12.1/ninja.exe' '-C' 'C:/Users/yy/Desktop/4t_robot/4t_robot/project-name/build' '-t' 'recompact'
+
+  failed with:
+
+   ninja: error: failed recompaction: Permission denied
+
+
+
+CMake Error:
+  Running
+
+   'D:/Work_4t/ESP_ENV/tools/ninja/1.12.1/ninja.exe' '-C' 'C:/Users/yy/Desktop/4t_robot/4t_robot/project-name/build' '-t' 'restat' 'build.ninja'
+
+  failed with:
+
+   ninja: error: failed recompaction: Permission denied
+
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.
